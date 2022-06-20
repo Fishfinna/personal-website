@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&family=Quicksand:wght@300&family=Roboto:wght@300&display=swap');
+:root {
+    --background: #282826;
+    --nav: 21, 19, 21;
+    --nav-text: #ca8531;
+    --warm-text: rgba(255, 89, 0, 0.743);
+    --body-text: rgb(201, 187, 178);
+    --solid-gold: rgb(231, 176, 12);
+    --gold: linear-gradient( to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
+    --solid-bronze: rgb(119, 50, 27);
+    --white: #fff;
+}
+
+html {
+    overflow-wrap: anywhere;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background);
+    letter-spacing: .7px;
+    word-spacing: 2px;
+}
+
+i.material-symbols-rounded {
+    font-size: 150%;
+    vertical-align: sub;
+}
+
+body {
+    overflow-y: overlay;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    color: var(--body-text);
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+p {
+    margin: 5%;
+}
+
+h2 {
+    -webkit-text-stroke: .1px white;
+    color: transparent;
+    font-family: "Poiret One";
+    font-weight: bold;
+    margin: 5%;
+    font-size: 2.5em;
+}
+
+h1.title {
+    -webkit-background-clip: text;
+    font-family: "Limelight";
+    font-weight: bold;
+    font-size: min(max(3em, 25vw), 60px);
+    color: transparent;
+    background-image: var(--gold);
+    text-align: center;
+    align-self: center;
+}
+
+
+/* navbar */
+
+nav {
+    position: fixed;
+    right: 10px;
+    color: var(--nav-text);
+    font-size: 0.6em;
+    white-space: nowrap;
+    z-index: 999;
+    padding: 1em;
+}
+
+.topnav {
+    height: 100vh;
+    font-size: 1.3em;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.topnav:not(.fade) a,
+.topnav a:not(.sequence) {
+    font-weight: bold;
+    background-color: rgba(var(--nav), .95);
+    margin: 10px;
+    border: 1px solid var(--nav-text);
+    transition: 1.2s;
+    border-radius: 10em;
+    margin-right: 1em;
+    font-size: 1em;
+    color: var(--text);
+    padding: 1em;
+    text-decoration: none;
+    display: none;
+}
+
+.fade a:not(.icon) {
+    font-weight: bold;
+    background-color: rgba(var(--nav), .98);
+    margin: 10px;
+    border: 1px solid var(--nav-text);
+    transition: 1.2s;
+    border-radius: 10em;
+    margin-right: 1em;
+    font-size: 1em;
+    color: var(--text);
+    padding: 1em;
+    text-decoration: none;
+    display: visible;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutBottom;
+}
+
+.topnav a:hover {
+    color: var(--lighted-text);
+    text-shadow: var(--warm-text) 0 0 20px;
+}
+
+.topnav a.icon {
+    border-radius: 90em;
+    display: block;
+    padding: 0.3em;
+    padding-top: 0.5em;
+}
+
+.topnav.responsive a {
+    display: block;
+    text-align: left;
+}
+
+
+/* hamburger */
+
+.fadeInBottom {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    display: inline-block;
+    animation-name: fadeInBottom;
+}
+
+.ham {
+    zoom: 40%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: var(--nav-text);
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+.ham4 .top {
+    stroke-dasharray: 40 110;
+}
+
+.ham4 .middle {
+    stroke-dasharray: 40 110;
+}
+
+.ham4 .bottom {
+    stroke-dasharray: 40 110;
+}
+
+.ham4.active .top {
+    stroke-dashoffset: -68px;
+}
+
+.ham4.active .middle {
+    stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+    stroke-dashoffset: -68px;
+}
+
+.container-compass {
+    transition: all 2.3s;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.compass {
+    background-image: url("/static/images/compass-1.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-duration: 1s;
+    transition: all 2.3s;
+    animation-name: fadeUp;
+    box-shadow: rgba(var(--nav) 0.25) 0px 25px 50px -12px;
+    background-color: var(--background);
+    background-blend-mode: soft-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.compass:hover {
+    transform: scale(1.02);
+}
+
+#cover-title {
+    overflow: hidden;
+    border-radius: 1px;
+    align-self: center;
+    width: 80%;
+    border: 15px solid transparent;
+    outline: 2px solid var(--solid-gold);
+    outline-offset: -10px;
+    background: linear-gradient(var(--nav-text) 0 0) top, linear-gradient(var(--solid-gold) 0 0) left, linear-gradient(var(--nav-text) 0 0) bottom, linear-gradient(var(--solid-gold) 0 0) right;
+    background-size: 200% 2px, 2px 200%;
+    background-color: rgba(var(--nav), 0.5);
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+#cover-title p {
+    font-size: 1em;
+    text-align: left;
+    margin-top: -2em;
+}
+
+
+/* deco box */
+
+.deco-box {
+    margin: 5vw;
+    margin-bottom: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 20vw;
+    min-width: 150px;
+    min-height: 150px;
+    border: 2px solid var(--nav-text);
+    background-color: var(--background);
+    /* change the #282826 colour here so that it's the same as the background */
+    box-shadow: 10px 10px 0px 2px var(--background), 12px 12px 0px 1px var(--solid-bronze), -10px -10px 0px 2px var(--background), -12px -12px 0px 1px var(--solid-bronze), 0px 0px 0px 8px var(--nav-text);
+    transition: all .5s;
+}
+
+.deco-box:before {
+    content: "";
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    min-width: 150px;
+    min-height: 150px;
+    box-shadow: 0px 0px 0px 2px var(--solid-gold), 0px 0px 0px 1.9vw var(--background), 0px 0px 0px 2vw var(--solid-gold);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.deco-box:hover {
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.deco-box * {
+    text-align: center;
+    transition: all .5s;
+    font-weight: bold;
+}
+
+.deco-box:hover p {
+    font-size: 1.1em;
+    color: var(--nav-text);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.box-lineup {
+    padding: 10%;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.image-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: -10;
+    background-attachment: fixed;
+    height: 100vh;
+    background-color: var(--background);
+    background-image: url("/static/images/in_the_forest.jpg");
+    background-size: cover;
+}
+
+.roman {
+    background-image: url("/static/images/the_roman_theater_at_taormina_2004.166.33.jpg");
+}
+
+.forest {
+    background-image: url("/static/images/the_return_2014.79.12.jpg");
+}
+
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(var(--nav), 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--nav), .5);
+    border-radius: 10rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(186, 128, 48, 0.4);
+}
+
+
+/* keyframe animations */
+
+@keyframes fadeUp {
+    from {
+        opacity: .4;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOutBottom {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(140%);
+    }
+}

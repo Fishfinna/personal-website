@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&family=Quicksand:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Limelight&family=Poiret+One&family=Quicksand:wght@300&family=Roboto:wght@300&display=swap');
 :root {
     --background: #282826;
     --nav: 21, 19, 21;
@@ -12,11 +12,10 @@
 }
 
 html {
+    scroll-behavior: smooth;
     overflow-wrap: anywhere;
     font-family: 'Quicksand', sans-serif;
     background-color: var(--background);
-    letter-spacing: .7px;
-    word-spacing: 2px;
 }
 
 i.material-symbols-rounded {
@@ -40,27 +39,63 @@ pre {
 }
 
 p {
+    letter-spacing: .7px;
+    word-spacing: 1px;
     margin: 5%;
 }
 
-h2 {
-    -webkit-text-stroke: .1px white;
-    color: transparent;
-    font-family: "Poiret One";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fira Code";
     font-weight: bold;
     margin: 5%;
-    font-size: 2.5em;
+    font-size: 3em;
+    margin-top: 8%;
+    text-decoration: 2px dashed var(--body-text);
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 h1.title {
     -webkit-background-clip: text;
     font-family: "Limelight";
     font-weight: bold;
-    font-size: min(max(3em, 25vw), 60px);
+    font-size: max(min(3em, 25vw), 40px);
     color: transparent;
     background-image: var(--gold);
     text-align: center;
     align-self: center;
+    margin-bottom: 1em;
+}
+
+ul {
+    line-height: 200%;
+    letter-spacing: .7px;
+    word-spacing: 1px;
+    margin: 5%;
+    font-family: "Fira Code";
+    list-style-type: '> ';
+}
+
+li {
+    color: var(--solid-gold);
+    /* Bullet Color */
+}
+
+li span {
+    color: var(--body-text);
+    /* Text Color */
 }
 
 
@@ -198,14 +233,15 @@ nav {
     stroke-dashoffset: -68px;
 }
 
-.container-compass {
+.container-header {
     transition: all 2.3s;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
 }
 
-.compass {
+.header-graphic {
+    background-attachment: fixed;
     background-image: url("/static/images/compass-1.jpg");
     width: 100vw;
     height: 100vh;
@@ -228,7 +264,19 @@ nav {
     transform: scale(1.02);
 }
 
-#cover-title {
+.inline-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: rgba(240, 153, 46, 0.4) 5px 5px, rgba(240, 133, 46, 0.3) 10px 10px, rgba(240, 143, 46, 0.2) 15px 15px, rgba(240, 143, 46, 0.1) 20px 20px, rgba(240, 143, 46, 0.05) 25px 25px;
+}
+
+.deco-div {
     overflow: hidden;
     border-radius: 1px;
     align-self: center;
@@ -249,10 +297,14 @@ nav {
     text-align: center;
 }
 
-#cover-title p {
+.deco-div p {
     font-size: 1em;
     text-align: left;
     margin-top: -2em;
+}
+
+.about-me {
+    padding-top: 0;
 }
 
 
@@ -324,27 +376,6 @@ nav {
     flex-wrap: wrap;
 }
 
-.image-background {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    z-index: -10;
-    background-attachment: fixed;
-    height: 100vh;
-    background-color: var(--background);
-    background-image: url("/static/images/in_the_forest.jpg");
-    background-size: cover;
-}
-
-.roman {
-    background-image: url("/static/images/the_roman_theater_at_taormina_2004.166.33.jpg");
-}
-
-.forest {
-    background-image: url("/static/images/the_return_2014.79.12.jpg");
-}
-
 
 /* scroll bar */
 
@@ -367,6 +398,65 @@ nav {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(186, 128, 48, 0.4);
+}
+
+
+/* arrow bounce */
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+
+/* contact */
+
+li span {
+    text-align: right;
+}
+
+
+/* hr content*/
+
+hr {
+    margin-top: 4vh;
+    overflow: visible;
+    /* For IE */
+    padding: 0;
+    border: none;
+    border-top: .3em double rgba(120, 78, 51, 0.605);
+    color: rgba(224, 187, 135, 0.646);
+    text-align: center;
+}
+
+hr:after {
+    content: "♢";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 1.5em;
+    padding: 0 0.45em;
+    background-color: var(--background);
+}
+
+footer hr:after {
+    background-color: rgba(var(--nav), 1);
+}
+
+footer {
+    align-items: flex-end;
+    height: max(20vh, auto);
+    font-size: 1.3em;
+    padding: 1%;
+    position: relative;
+    bottom: 0;
+    max-width: 100vw;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(var(--nav), 1);
 }
 
 
@@ -399,5 +489,21 @@ nav {
     to {
         opacity: 0;
         transform: translateY(140%);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-2vh);
+    }
+    60% {
+        transform: translateY(-1vh);
     }
 }

@@ -9,7 +9,7 @@
     --gold: linear-gradient( to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
     --solid-bronze: rgb(119, 50, 27);
     --white: #fff;
-    --link: rgb(247, 214, 209);
+    --link: rgb(255, 106, 106);
 }
 
 html {
@@ -36,7 +36,9 @@ a {
     color: var(--link);
 }
 
-a:hover {
+a:hover,
+a:active,
+a:visited {
     text-decoration-style: dashed;
 }
 
@@ -191,8 +193,17 @@ nav {
     animation-name: fadeInBottom;
 }
 
+a.icon {
+    width: calc(1em + 2vw);
+    height: calc(1em + 2vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .ham {
-    zoom: 40%;
+    width: calc(1em + 2vw);
+    height: calc(1em + 2vw);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: transform 400ms;
@@ -254,7 +265,6 @@ nav {
 /* header */
 
 .header-graphic {
-    background-attachment: fixed;
     background-image: url("/static/images/header.jpg");
     width: 100vw;
     height: 100vh;
@@ -430,7 +440,7 @@ div.email-content {
 
 form.about-email * {
     margin: 1vmin;
-    width: 50vmin;
+    width: 70vw;
 }
 
 form button {

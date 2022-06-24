@@ -9,7 +9,7 @@
     --gold: linear-gradient( to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
     --solid-bronze: rgb(119, 50, 27);
     --white: #fff;
-    --link: rgb(255, 106, 106);
+    --link: rgb(244, 164, 98);
 }
 
 html {
@@ -33,12 +33,13 @@ body {
 }
 
 a {
-    color: var(--link);
+    color: var(--solid-gold);
 }
 
 a:hover,
 a:active,
 a:visited {
+    color: var(--link);
     text-decoration-style: dashed;
 }
 
@@ -194,16 +195,16 @@ nav {
 }
 
 a.icon {
-    width: calc(1em + 2vw);
-    height: calc(1em + 2vw);
+    width: calc(1.5em + 2vw);
+    height: calc(1.5em + 2vw);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .ham {
-    width: calc(1em + 2vw);
-    height: calc(1em + 2vw);
+    width: calc(1.5em + 2vw);
+    height: calc(1.5em + 2vw);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: transform 400ms;
@@ -295,10 +296,6 @@ a.icon {
 
 .about-intro {
     margin-bottom: 30vmin;
-}
-
-.about-intro h2 {
-    font-size: min(6vmin, 3em)
 }
 
 .prof-photo {
@@ -444,6 +441,7 @@ form.about-email * {
 }
 
 form button {
+    font-size: 1em;
     font-family: "Fira Code", sans-serif;
     padding: 10px;
     background-color: var(--nav-text);
@@ -456,7 +454,11 @@ form button:hover {
     box-shadow: 0px 0px 5px var(--solid-gold);
 }
 
-form textarea,
+form label {
+    font-size: 1em;
+}
+
+textarea,
 input {
     background-color: rgb(var(--nav));
     border: none;
@@ -464,6 +466,11 @@ input {
     padding: .6em;
     color: var(--body-text);
     font-family: "Fira Code", sans-serif;
+}
+
+textarea:focus,
+input:focus {
+    box-shadow: 0px 0px 10px var(--solid-gold);
 }
 
 

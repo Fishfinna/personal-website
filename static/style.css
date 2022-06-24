@@ -9,7 +9,7 @@
     --gold: linear-gradient( to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
     --solid-bronze: rgb(119, 50, 27);
     --white: #fff;
-    --link: rgb(244, 164, 98);
+    --link: rgb(46, 229, 211);
 }
 
 html {
@@ -33,13 +33,14 @@ body {
 }
 
 a {
-    color: var(--solid-gold);
+    color: var(--link);
+    text-decoration: none;
 }
 
 a:hover,
 a:active,
 a:visited {
-    color: var(--link);
+    text-decoration: underline;
     text-decoration-style: dashed;
 }
 

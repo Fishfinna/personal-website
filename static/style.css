@@ -8,9 +8,15 @@
     --solid-gold: rgb(231, 176, 12);
     --gold: linear-gradient( to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
     --solid-bronze: rgb(119, 50, 27);
-    --white: #fff;
+    --white: #f9f9f9;
     --link: rgb(46, 229, 211);
+    --layer: 19, 17, 17;
+    --black: #2a2a2a;
+    --dark-text: #4E4E4E;
 }
+
+
+/* basic set up */
 
 html {
     scroll-behavior: smooth;
@@ -45,40 +51,93 @@ a:visited {
 }
 
 pre {
+    font-family: 'Quicksand', sans-serif;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
 
-p {
-    letter-spacing: .7px;
-    word-spacing: 1px;
-    margin: 5%;
-    font-size: calc(1em+3vmin);
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    margin: 1.5rem;
+    margin-top: calc(3rem + 5vw);
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: "Fira Code";
 }
 
 h1,
+.h1 {
+    font-size: calc(2rem + 1.5vw);
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+    h1,
+    .h1 {
+        font-size: 2.5rem;
+    }
+}
+
 h2,
+.h2 {
+    text-align: center;
+    font-size: calc(2rem + 1vw);
+    margin: 1em;
+}
+
+@media (min-width: 1200px) {
+    h2,
+    .h2 {
+        font-size: 2rem;
+    }
+}
+
 h3,
+.h3 {
+    font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+    h3,
+    .h3 {
+        font-size: 1.75rem;
+    }
+}
+
 h4,
+.h4 {
+    font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+    h4,
+    .h4 {
+        font-size: 1.5rem;
+    }
+}
+
 h5,
-h6 {
-    font-family: "Fira Code";
-    font-weight: bold;
-    margin: 5%;
-    font-size: 3em;
-    margin-top: 8%;
-    text-decoration: 2px dashed var(--body-text);
+.h5 {
+    font-size: 1.25rem;
 }
 
-h3 {
-    font-size: 2em;
-}
-
-h4 {
-    font-weight: normal;
-    font-size: 1.8em;
+p {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin: 1.5rem;
 }
 
 h1.title {
@@ -344,72 +403,104 @@ a.icon {
 }
 
 
-/* deco box */
+/* Projects Section */
 
-.deco-box {
-    margin: 5vw;
-    margin-bottom: 40vh;
+.project-container h3 {
+    text-align: center;
+}
+
+
+/* project cards */
+
+div.card-container {
+    width: 100%;
+    overflow: wrap;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20vw;
-    height: 20vw;
-    min-width: 150px;
-    min-height: 150px;
-    border: 2px solid var(--nav-text);
-    background-color: var(--background);
-    /* change the #282826 colour here so that it's the same as the background */
-    box-shadow: 10px 10px 0px 2px var(--background), 12px 12px 0px 1px var(--solid-bronze), -10px -10px 0px 2px var(--background), -12px -12px 0px 1px var(--solid-bronze), 0px 0px 0px 8px var(--nav-text);
-    transition: all .5s;
-}
-
-.deco-box:before {
-    content: "";
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    min-width: 150px;
-    min-height: 150px;
-    box-shadow: 0px 0px 0px 2px var(--solid-gold), 0px 0px 0px 1.9vw var(--background), 0px 0px 0px 2vw var(--solid-gold);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.deco-box:hover {
-    cursor: pointer;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.deco-box * {
     text-align: center;
-    transition: all .5s;
-    font-weight: bold;
+    color: var(--dark-text);
 }
 
-.deco-box:hover p {
-    font-size: 1.1em;
+div.card-container h4 {
+    color: var(--black);
+    margin-top: .1em;
+    margin-bottom: .1rem;
+    font-size: calc( 1rem + 1vmin);
+    font-family: "Fira Code";
+}
+
+div.card-container .lighter {
     color: var(--nav-text);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    font-family: "Fira Code";
+    margin-bottom: 0;
+    font-size: small;
 }
 
-.box-lineup {
-    padding: 10%;
+div.card {
+    margin: 5vmin;
+    outline: calc(.2vmin + 2px) solid var(--white);
+    overflow: hidden;
+    background-color: var(--white);
+    width: 20rem;
+    height: 30rem;
+    border-radius: 1em;
     display: flex;
-    align-items: space-between;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: rgba(240, 153, 46, 0.4) -5px 5px, rgba(240, 143, 46, 0.2) -15px 15px;
+}
+
+div.react {
+    box-shadow: rgba(240, 153, 46, 0.4) 5px 5px, rgba(240, 143, 46, 0.2) 15px 15px;
+}
+
+.img-container {
+    width: 20rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 1em 1em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    transform: scale(1.1);
+    min-width: 20rem;
+    min-height: 10rem;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    vertical-align: middle;
+    border-radius: 1em 1em 0 0;
+    object-fit: cover;
+    justify-self: flex-start;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-img {
+    transform: scale(1.3);
+}
+
+div.card button {
+    margin: .1em;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Fira Code", sans-serif;
+    padding: 10px;
+    color: var(--nav-text);
+    background-color: rgba(var(--layer), 1);
+    border: none;
+    border-radius: 10px;
+}
+
+div.card button:hover {
+    background-color: var(--background);
+    color: var(--solid-gold);
 }
 
 
@@ -419,6 +510,9 @@ form {
     display: flex;
     flex-direction: column;
     margin: 5%;
+    background-color: rgba(var(--layer), 0.2);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px, rgba(0, 0, 0, 0.3) 0px 1px 2px;
 }
 
 form.about-email {
@@ -460,8 +554,8 @@ form lable {
 
 textarea,
 form input {
-    background-color: rgb(var(--nav));
     border: none;
+    background-color: rgb(var(--nav));
     border-radius: 10px;
     padding: 1em;
     color: var(--body-text);
@@ -538,6 +632,9 @@ hr:after {
     padding: 0 0.45em;
     background-color: var(--background);
 }
+
+
+/* footers */
 
 footer hr:after {
     background-color: rgba(var(--nav), 1);

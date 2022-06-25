@@ -278,7 +278,6 @@ a.icon {
     background-repeat: no-repeat;
     animation-duration: 1s;
     transition: all 2.3s;
-    animation-name: fadeUp;
     box-shadow: rgba(var(--nav) 0.25) 0px 25px 50px -12px;
     background-color: var(--background);
     background-blend-mode: soft-light;

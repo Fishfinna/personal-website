@@ -441,6 +441,7 @@ div.card-container .lighter {
 
 div.card {
     margin: 5vmin;
+    max-width: 80%;
     border: calc(.2vmin + 2px) solid var(--widget);
     overflow: hidden;
     background-color: var(--widget);
@@ -457,6 +458,7 @@ div.large-card {
     width: calc(50vw + 10em);
     max-width: 80vw;
     border-radius: 5px;
+    height: fit-content;
 }
 
 div.react {

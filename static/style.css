@@ -440,7 +440,7 @@ div.card-container .lighter {
 
 div.card {
     margin: 5vmin;
-    outline: calc(.2vmin + 2px) solid var(--white);
+    border: calc(.2vmin + 2px) solid var(--white);
     overflow: hidden;
     background-color: var(--white);
     width: 20rem;

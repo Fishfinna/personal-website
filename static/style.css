@@ -449,11 +449,18 @@ div.card {
     border-radius: .5em;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(240, 153, 46, 0.4) -5px 5px, rgba(240, 143, 46, 0.2) -15px 15px;
+    box-shadow: rgba(240, 153, 46, 0.2) -10px 10px, rgba(240, 143, 46, 0.2) -15px 15px;
+}
+
+div.large-card {
+    box-shadow: rgba(240, 153, 46, 0.2) 0px 0px 0 5px, rgba(240, 143, 46, 0.1) 0px 0px 0px 15px;
+    width: calc(50vw + 10em);
+    max-width: 80vw;
+    border-radius: 5px;
 }
 
 div.react {
-    box-shadow: rgba(240, 153, 46, 0.4) 5px 5px, rgba(240, 143, 46, 0.2) 15px 15px;
+    box-shadow: rgba(240, 153, 46, 0.4) 10px 10px, rgba(240, 143, 46, 0.2) 15px 15px;
 }
 
 .img-container {
@@ -466,19 +473,30 @@ div.react {
     align-items: center;
 }
 
+.large-card-img-container {
+    width: calc(50vw + 10em);
+    height: 20rem;
+    border-radius: 2px;
+}
+
 .card-img {
     transform: scale(1.1);
-    min-width: 20rem;
-    min-height: 10rem;
+    width: calc(50vw + 10em);
+    height: 10rem;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
     vertical-align: middle;
-    border-radius: .5em .5em 0 0;
     object-fit: cover;
     justify-self: flex-start;
+}
+
+.large-card-img-container {
+    width: fit-content;
+    height: auto;
+    transform: scale(1);
 }
 
 .card:hover .card-img {

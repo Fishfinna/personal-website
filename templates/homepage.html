@@ -4,8 +4,6 @@
 
 
 
-
-
 <header class="container-header">
     <div class="header-graphic">
 
@@ -55,12 +53,24 @@
 
     <h4>Send me an Email</h4>
     <p>Ask me anything or just say hi!</p>
-    <form class="about-email" type="email">
+
+
+    <form class="about-email" action="https://formsubmit.co/fishfinna12@gmail.com" method="POST">
+        <!-- honeypot -->
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- disable captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="hidden" name="_invalid" value="false">
+
+        <input type="hidden" name="_next" value="https://shanti-sg.herokuapp.com/">
+
         <div class="email-content">
-            <lable for="return">Return Address:</lable>
-            <input type="email" name="return"></input>
-            <lable for="msg">Message:</lable>
-            <textarea name="msg" rows="5"></textarea>
+            <lable for="email">Return Email:</lable>
+            <input type="email" id="return" name="email"></input>
+            <lable for="comments">Message:</lable>
+            <textarea name="comments" id="comments" rows="5"></textarea>
             <button>Send It Off</button>
         </div>
     </form>

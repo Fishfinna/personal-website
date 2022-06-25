@@ -455,16 +455,16 @@ form button:hover {
     box-shadow: 0px 0px 5px var(--solid-gold);
 }
 
-form label {
-    font-size: 1em;
+form lable {
+    font-size: larger;
 }
 
 textarea,
-input {
+form input {
     background-color: rgb(var(--nav));
     border: none;
     border-radius: 10px;
-    padding: .6em;
+    padding: 1em;
     color: var(--body-text);
     font-family: "Fira Code", sans-serif;
 }

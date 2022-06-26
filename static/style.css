@@ -532,11 +532,12 @@ div.react {
     margin-top: 5%;
     vertical-align: middle;
     width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 600px) {
     .column {
-        padding: 4%;
+        padding: 0 2%;
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;

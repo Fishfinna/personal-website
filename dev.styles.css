@@ -17,39 +17,173 @@ html {
 }
 
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    height: 200vh;
     font-family: "Fira Code";
-    background-color: var(--white);
+    background-color: var(--black-900);
 }
 
 .header-image {
-    background-image: url("/images/city-header.png");
+    background-image: url("/dev.images/header.jpg");
     background-position: center center; 
     overflow: hidden;
-    position: absolute;
-    transform: scale(1.4);
-    filter: brightness(.7) contrast(1.1);
     background-size: cover;
-    height: 50vh;
+    height: 100vh;
+    max-width: 100%;
     width: 100vw;
 }
 
-.header-content {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    text-align: left;
+/* navbar */
+
+nav {
+    font-weight: 700;
+    position: fixed;
+    right: 10px;
+    color: var(--nav-text);
+    font-size: 0.6em;
+    white-space: nowrap;
+    z-index: 999;
+    padding: 1em;
+}
+
+.topnav {
+    height: 100vh;
+    font-size: 1.3em;
+    overflow: hidden;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    align-items: flex-end;
+}
+
+.topnav:not(.fade) a,
+.topnav a:not(.sequence) {
+    font-weight: bold;
+    background-color: rgba(var(--nav), .95);
+    margin: 10px;
+    border: 1px solid var(--nav-text);
+    transition: 1.2s;
+    border-radius: 10em;
+    margin-right: 1em;
+    font-size: 1em;
+    color: var(--text);
+    padding: 1em;
+    text-decoration: none;
+    display: none;
+}
+
+.fade a:not(.icon) {
+    font-weight: bold;
+    background-color: rgba(var(--nav), .98);
+    margin: 10px;
+    border: 1px solid var(--nav-text);
+    transition: 1.2s;
+    border-radius: 10em;
+    margin-right: 1em;
+    font-size: 1em;
+    color: var(--text);
+    padding: 1em;
+    text-decoration: none;
+    display: visible;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutBottom;
+}
+
+.topnav a:hover {
+    color: var(--lighted-text);
+    text-shadow: var(--warm-text) 0 0 20px;
+}
+
+.topnav a.icon {
+    border-radius: 90em;
+    display: block;
+    padding: 0.3em;
+    padding-top: 0.5em;
+}
+
+.topnav.responsive a {
+    display: block;
+    text-align: left;
+}
+
+
+/* hamburger */
+
+.fadeInBottom {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    display: inline-block;
+    animation-name: fadeInBottom;
+}
+
+a.icon {
+    width: calc(1.5em + 2vw);
+    height: calc(1.5em + 2vw);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    margin-top: 20vh;
-    backdrop-filter: blur(4px);
-    color: var(--white);
-    background-color: rgba(255,255,255,0.1);
+}
+
+.ham {
+    width: calc(1.5em + 2vw);
+    height: calc(1.5em + 2vw);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: var(--nav-text);
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+.ham4 .top {
+    stroke-dasharray: 40 110;
+}
+
+.ham4 .middle {
+    stroke-dasharray: 40 110;
+}
+
+.ham4 .bottom {
+    stroke-dasharray: 40 110;
+}
+
+.ham4.active .top {
+    stroke-dashoffset: -68px;
+}
+
+.ham4.active .middle {
+    stroke-dashoffset: -68px;
+}
+
+.ham4.active .bottom {
+    stroke-dashoffset: -68px;
+}
+
+.container-header {
+    transition: all 2.3s;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 50px;
 }
 
 

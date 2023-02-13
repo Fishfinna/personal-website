@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,1,0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -9,14 +10,34 @@
         <title>Shanti S.</title>
     </head>
     <body>
-        <div class="header-image"></div>
-        <div class="header-content-buffer">
-            <div class="header-content">
-                <p>Hi! I'm</p>
-                <h1>Shanti S.</h1>
-                <p>I do</p>
-                <p>Scroll down, learn more.</p>
+        <nav class="navMenu">
+            <div class="topnav" id="myTopnav">
+                <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+                    <svg
+                        class="ham hamRotate ham4"
+                        viewBox="0 0 100 100"
+                        width="80"
+                        onclick="this.classList.toggle('active')"
+                    >
+                        <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"/>
+                        <path class="line middle" d="m 70,50 h -40"/>
+                        <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"/>
+                    </svg>
+                </a>
+                <a href="#about" class="cssanimation sequence fadeInBottom">
+                    <i class="material-symbols-rounded">person</i>
+                    &nbsp ABOUT ME
+                </a>
+                <a href="#projects" class="cssanimation sequence fadeInBottom">
+                    <i class="material-symbols-rounded">draw</i>
+                    &nbsp PROJECTS
+                </a>
+                <a href="#education" class="cssanimation sequence fadeInBottom">
+                    <i class="material-symbols-rounded">school</i>
+                    &nbsp EDUCATION
+                </a>
             </div>
-        </div>
+        </nav>
+        <div class="header-image"></div>
     </body>
 </html>

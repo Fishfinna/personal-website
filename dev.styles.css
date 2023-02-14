@@ -2,6 +2,7 @@
 
 
 :root {
+    --black: #1b1b1b;
     --black-900: #2B2C2F;
     --black-800: #343434;
     --black-500: #474954;
@@ -107,7 +108,6 @@ nav {
     display: block;
     text-align: left;
 }
-
 
 /* hamburger */
 

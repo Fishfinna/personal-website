@@ -14,6 +14,9 @@
     ;
 }
 
+
+/* For general content */
+
 body {
     background: var(--black);
     height: 200vh;
@@ -31,24 +34,41 @@ canvas {
     filter: opacity(0.9);
 }
 
+p {
+    font-family: "fira code";
+    font-size: 1.3em;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Yeseva One";
+    font-family: "Press Start 2P";
 }
 
 h1 {
     color: var(--white-trans);
-    font-size: 3em;
+    font-size: 2rem;
 }
 
 
+/* for specific content */
 
+.hero {
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.hero h1 {
+    font-size: 3rem;
+}
 
-
+.hero-content {
+    font-size: .6em;
+}
 
 /* glow stuffles */
 .glow {
-    font-size: 80px;
     text-align: center;
     -webkit-animation: glow 3s ease-in-out infinite alternate;
     -moz-animation: glow 3s ease-in-out infinite alternate;

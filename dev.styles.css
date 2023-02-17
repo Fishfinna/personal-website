@@ -22,6 +22,11 @@ body {
     height: 200vh;
     max-width: 100vh;
     color: var(--white);
+    font-family: "fira code";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 canvas {
@@ -55,7 +60,7 @@ h1 {
 .hero {
     display: flex;
     height: 100vh;
-    min-width: 100vw;
+    max-width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -71,11 +76,34 @@ h1 {
 
 
 /* info */
-.pix-me {
-    display: block;
-    float: right;
-    height: 300px;
+
+.pix-bio {
+    background-color: var(--black-800);
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
 }
+
+
+.pix-me {
+    align-self: flex-end;
+    float: right;
+    width: 200px;
+    padding-top: 20px;
+}
+
+.pix-text {
+    background-color: var(--black);
+    height: fit-content;
+    padding: 20px 50px;
+    max-width: 45vw;
+    border-radius: 100px 100px 0 100px;
+    box-shadow: 20px 10px 0 var(--black-900);
+}
+
+
 
 
 /* glow stuffles */

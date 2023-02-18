@@ -16,6 +16,9 @@
 }
 
 /* For general content */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: var(--black);
@@ -54,22 +57,43 @@ h1 {
 
 /* for specific content */
 
-/* hero */
-.hero-git {
-    width: 40px;
+
+/* nav header icons */
+
+
+nav {
+    position: fixed;
+    margin-right: 10px;
+    padding-top: 1vw;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 1em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     transition: all .8s;
-    position: absolute;
-    top: 2%;
-    right: 2%;
+    backdrop-filter: blur(30px);
+    height: 50px;
+    z-index: 1000;
+}
+
+
+.corner-cons img {
+    transition: all .8s;
+    position: relative;
+    padding: 5px 15px;
+    width: 30px;
     filter: brightness(1);
 }
 
-.hero-git:hover {
-    transition: all .8s;
+.corner-cons img:hover {
     filter: brightness(1.4);
+    margin-top: 10px;
 }
 
 
+
+/* hero */
 .hero {
     display: flex;
     min-height: 100vh;
@@ -85,16 +109,23 @@ h1 {
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.hero p:last-child {
+    font-size: .8rem;
+    color: var(--white-trans);
+    text-align: center;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .hero p {
+    .hero p:first-child {
         font-size: 1rem;
     }
 }
@@ -102,6 +133,7 @@ h1 {
 .hero-content {
     font-size: .6em;
 }
+
 
 
 /* info */
@@ -190,4 +222,61 @@ h1 {
     to {
         text-shadow: 0 0 0px #fff, 0 0 20px #ffc14d, 0 0 10px #faaeae, 0 0 20px #c32e2e, 0 0 60px #eab05a, 0 0 70px #ff944d, 0 0 80px #ff9d4d;
     }
+}
+
+
+/* arrow bounce */
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+.arrow {
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-2vh);
+    }
+
+    60% {
+        transform: translateY(-1vh);
+    }
+}
+
+
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(186, 128, 48, 0.4);
 }

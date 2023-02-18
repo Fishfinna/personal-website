@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Limelight&family=Poiret+One&family=Quicksand:wght@300&family=Roboto:wght@300&display=swap');
+
 :root {
     --background: #282826;
     --nav: 21, 19, 21;
@@ -6,7 +7,7 @@
     --warm-text: rgba(255, 89, 0, 0.743);
     --body-text: rgb(201, 187, 178);
     --solid-gold: rgb(231, 176, 12);
-    --gold: linear-gradient( to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
+    --gold: linear-gradient(to right, #6f5527 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #b98e44 100%);
     --solid-bronze: rgb(119, 50, 27);
     --white: #f5f2f5;
     --link: rgb(46, 229, 211);
@@ -44,10 +45,10 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: cyan;
     text-decoration: underline;
-    text-decoration-style: dashed ;
+    text-decoration-style: dashed;
 }
 
 pre {
@@ -84,6 +85,7 @@ h1,
 }
 
 @media (min-width: 1200px) {
+
     h1,
     .h1 {
         font-size: 2.5rem;
@@ -98,6 +100,7 @@ h2,
 }
 
 @media (min-width: 1200px) {
+
     h2,
     .h2 {
         font-size: 2rem;
@@ -110,6 +113,7 @@ h3,
 }
 
 @media (min-width: 1200px) {
+
     h3,
     .h3 {
         font-size: 1.75rem;
@@ -122,6 +126,7 @@ h4,
 }
 
 @media (min-width: 1200px) {
+
     h4,
     .h4 {
         font-size: 1.5rem;
@@ -431,7 +436,7 @@ div.card-container h4 {
     color: var(--white);
     margin-top: .1em;
     margin-bottom: .1rem;
-    font-size: calc( 1rem + 1vmin);
+    font-size: calc(1rem + 1vmin);
     font-family: "Fira Code";
 }
 
@@ -594,11 +599,12 @@ button {
     color: var(--background);
     border: none;
     border-radius: 2px;
-    
+
 }
-.project-container a:hover{
+
+.project-container a:hover {
     text-decoration: none;
-   
+
     text-decoration-style: none;
 }
 
@@ -743,6 +749,7 @@ a img:hover {
         opacity: .4;
         transform: translateY(-10%);
     }
+
     to {
         opacity: 1;
     }
@@ -753,6 +760,7 @@ a img:hover {
         opacity: 0;
         transform: translateY(-100%);
     }
+
     to {
         opacity: 1
     }
@@ -762,6 +770,7 @@ a img:hover {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
         transform: translateY(140%);
@@ -769,6 +778,7 @@ a img:hover {
 }
 
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -776,9 +786,11 @@ a img:hover {
     100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-2vh);
     }
+
     60% {
         transform: translateY(-1vh);
     }

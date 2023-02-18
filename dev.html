@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,1,0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
@@ -12,21 +12,36 @@
         <title>Shanti S.</title>
     </head>
     <body>
-        <!-- hero header thing idk -->
-        <div class="hero">
-            <canvas id="canvas"></canvas>
-            <a href="https://github.com/Fishfinna">
+        <canvas id="canvas"></canvas>
+        <!-- nav bar -->
+        <nav class="corner-cons">
+            <a href="https://www.linkedin.com/in/shanti-sg/" target="_blank">
+                <img src="icons/linkedin.svg" class="hero-linkin">
+            </a>
+            <a href="#email">
+                <img src="icons/email.svg" class="hero-email">
+            </a>
+            <a href="https://github.com/Fishfinna" target="_blank">
                 <img src="icons/github.svg" class="hero-git">
             </a>
+        </nav>
+        <!-- hero header thing idk -->
+        <div class="hero">
             <h1 class="glow hero-title">
                 SHANTI S.
             </h1>
             <div class="hero-content">
                 <p>
                     I do
-                    <span class="txt-rotate" data-period="2000" data-rotate='[ "web design.", "python.", "node js.", "database integration.","fun stuff!" ]'></span>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "web design.", "graphical design.", "backend server.", "database management.","fun stuff!" ]'></span>
+                </p>
+                <p>
+                    Scroll down, learn more.
                 </p>
             </div>
+            <h1 onclick="window.scrollBy(0, window.innerHeight);" class="material-symbols-outlined arrow bounce">
+                expand_more
+            </h1>
         </div>
         <!-- content body -->
         <div>

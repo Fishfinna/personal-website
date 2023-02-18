@@ -41,7 +41,7 @@ canvas {
 }
 
 p {
-    font-family: "fira code";
+    font-family: "Fira Code";
     font-size: 1.2em;
 }
 
@@ -64,7 +64,7 @@ h1 {
 nav {
     position: fixed;
     margin-right: 10px;
-    padding-top: 1vw;
+    padding: 20px 20px;
     top: 0;
     right: 0;
     border-radius: 0 0 1em 1em;
@@ -106,15 +106,21 @@ nav {
 
 .hero h1 {
     font-size: 3.5rem;
+    text-align: center;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    inline-size: 100%;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
+    padding: 10px;
 }
 
 .hero p:last-child {
-    font-size: .8rem;
+    font-size: 1rem;
     color: var(--white-trans);
     text-align: center;
 }
@@ -122,11 +128,21 @@ nav {
 
 @media screen and (max-width: 700px) {
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .hero p:first-child {
         font-size: 1rem;
+    }
+
+    .hero p:last-child {
+        font-size: .6rem;
+        color: var(--white-trans);
+        text-align: center;
+    }
+
+    .hero-content {
+        font-size: .2rem;
     }
 }
 
@@ -146,14 +162,27 @@ nav {
 .stats-container {
     display: flex;
     flex-direction: row;
-    color: var(--black-700);
     font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .stats-container * {
     margin: 20px;
-    background-color: var(--white);
     border-radius: 20px;
+}
+
+.box {
+    background-color: var(--black-900);
+    box-shadow: 3px 3px 0 var(--yellow-900), 7px 7px 0 var(--yellow-700);
+    max-width: 80vw;
+}
+
+.stats-bio-text {
+    flex: 1;
+    padding: 20px;
+    max-width: min(600px, 70vw);
+    min-width: 30vw;
 }
 
 .pix-me {
@@ -161,10 +190,6 @@ nav {
     flex: 1;
 }
 
-.stats-bio-text {
-    flex: 2;
-    padding: 20px;
-}
 
 
 
@@ -243,4 +268,32 @@ nav {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(186, 128, 48, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general small phones */
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav {
+        transform: scale(.8);
+        margin: 0;
+    }
 }

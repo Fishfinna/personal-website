@@ -143,4 +143,4 @@ Array.prototype.each = function (a) {
   for (var i = 0; i < l; i++) a(this[i], i);
 };
 
-setTimeout(setup, 500);
+setTimeout(setup, 100);

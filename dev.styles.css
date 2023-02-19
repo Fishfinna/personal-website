@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chonburi&family=Press+Start+2P&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Press+Start+2P&display=swap');
 
 :root {
     --black: #1b1b1b;
@@ -166,6 +166,10 @@ nav {
     font-weight: 500;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.stats-container h1 {
+    color: var(--white-trans);
 }
 
 .stats-container * {

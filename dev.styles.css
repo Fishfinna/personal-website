@@ -234,7 +234,7 @@ nav {
 }
 
 .stats-bio-text {
-    min-width: 100%;
+    width: 100%;
     padding: 20px;
     min-width: 30vw;
 }

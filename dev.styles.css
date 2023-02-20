@@ -218,6 +218,7 @@ nav {
     margin: 30px;
     max-width: 1200px;
     overflow: wrap;
+    margin-bottom: 30vh;
 }
 
 .stats-container * {
@@ -235,7 +236,6 @@ nav {
 
 .stats-bio-text {
     width: 100%;
-    padding: 20px;
     min-width: 30vw;
 }
 
@@ -278,6 +278,20 @@ nav {
         max-width: 80vw;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* email */
+
+
+
 
 /* glow stuffles */
 .glow {

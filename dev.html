@@ -39,7 +39,7 @@
                     Scroll down, learn more.
                 </p>
             </div>
-            <h1 onclick="window.scrollBy(0, window.innerHeight);" class="material-symbols-outlined arrow bounce">
+            <h1 onclick="window.scrollBy(0, 1.3 * window.innerHeight);" class="material-symbols-outlined arrow bounce">
                 expand_more
             </h1>
         </div>
@@ -77,6 +77,25 @@
                 </div>
                 <img class="pix-me box" src="./images/Pixel_Me.png" alt="Me! in pixel art! :D">
             </div>
+        </div>
+        <!-- email -->
+        <div id="email">
+            <h1 class="darken">Send me an Email</h1>
+            <form class="about-email" action="https://formsubmit.co/fishfinna12@gmail.com" method="POST">
+                <!-- honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- disable captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_invalid" value="false">
+                <input type="hidden" name="_next" value="https://fishfinna.github.io/personal-website/">
+                <div class="email-content">
+                    <lable for="email">Return Email:</lable>
+                    <input type="email" id="return" name="email"></input>
+                    <lable for="comments">Message:</lable>
+                    <textarea name="comments" id="comments" rows="5"></textarea>
+                    <button>Send It Off</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>

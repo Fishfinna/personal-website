@@ -162,16 +162,13 @@ nav {
 }
 
 .hero h1 {
+    margin-top: -10vh;
     font-size: 4rem;
     text-align: center;
     padding: 10px;
     text-overflow: ellipsis;
     white-space: wrap;
     inline-size: 100%;
-}
-
-.hero h1.glow {
-    margin-top: 20vh;
 }
 
 .hero p {

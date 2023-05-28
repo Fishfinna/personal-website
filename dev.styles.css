@@ -195,30 +195,33 @@ button {
 .hero-button-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    gap: max(20%, 10px);
+    margin-top: calc(10vh + 10px);
+    gap: max(5%, 10px);
 }
 
 button.hero-button {
-    background-color: transparent;
+    background-color: var(--yellow-900);
+    font-size: 1.5rem;
     padding: 10px 20px;
-    color: var(--yellow-900);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    border-color: var(--yellow-trans);
+    border: none;
     flex: 1;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 5px var(--yellow-700), 0 0 10px var(--yellow-900);
 }
 
-@media screen and (max-width: 800px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
 
-    .hero p:first-child {
-        font-size: 1rem;
-    }
+button.hero-button:hover {
+    animation: button-glow 2s ease-in infinite;
+    box-shadow: 0 0 5px var(--yellow-700), 0 0 10px var(--yellow-900);
+}
+
+
+@media screen and (max-width: 800px) {
 
     .hero-typewriter {
         font-size: .8rem;
@@ -226,11 +229,16 @@ button.hero-button {
         text-align: center;
     }
 
-    .hero-content {
-        font-size: .2rem;
+    .hero-button-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button.hero-button {
+        padding: 15px;
+        width: 100%;
     }
 }
-
 
 /* glow stuffles */
 .glow {
@@ -247,6 +255,24 @@ button.hero-button {
 
     to {
         text-shadow: 0 0 0px #fff, 0 0 20px #ffc14d, 0 0 10px #faaeae, 0 0 20px #c32e2e, 0 0 60px #eab05a, 0 0 70px #ff944d, 0 0 80px #ff9d4d;
+    }
+}
+
+@keyframes button-glow {
+
+    0% {
+        background-color: var(--yellow-900);
+        box-shadow: 0 0 5px var(--yellow-700), 0 0 7px #ffc14d;
+    }
+
+    50% {
+        background-color: var(--yellow-800);
+        box-shadow: 0 0 0px var(--yellow-200), 0 0 10px #ffc14d, 0 0 15px #ff9d4d;
+    }
+
+    100% {
+        background-color: var(--yellow-900);
+        box-shadow: 0 0 5px var(--yellow-700), 0 0 7px #ffc14d;
     }
 }
 

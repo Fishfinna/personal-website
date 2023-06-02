@@ -202,20 +202,20 @@ button {
 }
 
 button.hero-button {
-    background-color: var(--yellow-900);
+    background-color: transparent;
+    color: var(--yellow-900);
+    border: solid 2px var(--yellow-900);
     font-size: 1.5rem;
     padding: 10px 20px;
-    backdrop-filter: blur(10px);
     border-radius: 20px;
-    border: none;
     flex: 1;
     cursor: pointer;
     outline: none;
-    box-shadow: 0 0 5px var(--yellow-700), 0 0 10px var(--yellow-900);
 }
 
 
 button.hero-button:hover {
+    color: var(--black);
     animation: button-glow 2s ease-in infinite;
     box-shadow: 0 0 5px var(--yellow-700), 0 0 10px var(--yellow-900);
 }

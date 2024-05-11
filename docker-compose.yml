@@ -13,6 +13,7 @@ services:
       - anime
     environment:
       PERSONAL_PORT: ${PERSONAL_PORT}
+      ANIME_PORT: ${ANIME_PORT}
     networks:
       - network
 
@@ -20,7 +21,7 @@ services:
     container_name: personal
     image: fishfinna/personal:latest
     ports:
-      - "9000:9000"
+      - "${PERSONAL_PORT}:${PERSONAL_PORT}"
     environment:
       VITE_HOST: ${HOST}
       VITE_PORT: ${PERSONAL_PORT}
@@ -32,6 +33,9 @@ services:
     image: fishfinna/anime:latest
     ports:
       - "8080:8080"
+    environment:
+      VITE_HOST: ${HOST}
+      VITE_PORT: ${ANIME_PORT}
     networks:
       - network
 
